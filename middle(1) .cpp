@@ -3,16 +3,6 @@
 
 using namespace std;
 
-long long step(int num, int step) {
-	int res;
-	res = num;
-	if (step == 0) return 1;
-	for (int i = 2; i <= step; i++) {
-		res = res * num;
-	}
-	return res;
-}
-
 void itc_num_print(int number) {
 	cout << number;
 }
