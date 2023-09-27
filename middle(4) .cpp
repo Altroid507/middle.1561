@@ -13,6 +13,19 @@ long long step(int num, int step) {
 	return res;
 }
 
+int itc_rev_bin_num(long long number) {
+	int res, cntr;
+	res = 0;
+	cntr = 0;
+	if (number < 2) return number;
+	while (number > 0) {
+		res += (number % 10) * step(2, cntr);
+		number = number / 10;
+		cntr++;
+	}
+	return res;
+}
+
 int itc_rev_oct_num(long long number) {
 	int res, cntr;
 	res = 0;
