@@ -1,4 +1,4 @@
-#include "middle (1).h"
+#include "middle.h"
 #include <iostream>
 
 using namespace std;
