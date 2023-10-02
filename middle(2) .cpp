@@ -15,19 +15,24 @@ int itc_min_num(long long number) {
 }
 
 int itc_rev_num(long long number) {
-	int rev, c;
+	int rev;
 	rev = 0;
-	c = 0;
 	if (number < 0) {
-       number = number * -1;
-       c = 1;
+		number = number * -1;
+		while (number > 0) {
+			rev += number % 10;
+			number = number / 10;
+			if (number > 0) rev = rev * 10;
+		}
+		rev = rev * -1;
 	}
-	while (number > 0) {
-		rev += number % 10;
-		number = number / 10;
-		if (number > 0) rev = rev * 10;
+	else {
+		while (number > 0) {
+			rev += number % 10;
+			number = number / 10;
+			if (number > 0) rev = rev * 10;
+		}
 	}
-	if (c == 1) rev = rev * -1;
 	return rev;
 }
 
