@@ -3,16 +3,6 @@
 
 using namespace std;
 
-long long step(int num, int step) {
-	int res;
-	res = num;
-	if (step == 0) return 1;
-	for (int i = 2; i <= step; i++) {
-		res = res * num;
-	}
-	return res;
-}
-
 int itc_second_max_num(long long number) {
 	int maxim, maxim2;
 	maxim = 0;
