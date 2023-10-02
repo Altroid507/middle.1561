@@ -45,6 +45,7 @@ long long itc_bin_num(long long number) {
 		for (int i = 0; number >= 2; i++) {
 			if (i != 0) {
 				res += (number % 2) * step(10, i);
+				if ((9223372036854775807 - (number % 2) * step(10, i)) != res) return -1;
 			}
 			else res += number % 2;
 			if ((number / 2) < 2) res += (number / 2) * step(10, i + 1);
