@@ -2,6 +2,8 @@
 #define MIDDLE_H_INCLUDED
 #include <iostream>
 
+long long step(int num, int step);
+
 void itc_num_print(int number);
 
 int itc_len_num(long long number);
